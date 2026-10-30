@@ -1,278 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
 
-    <!-- box icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Page title and description (shown in browser tab and search results) -->
+    <title>Abishek Kumar | SDET Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Abishek Kumar, an SDET with 3+ years of experience building end-to-end automation frameworks with Playwright, TypeScript and Node.js."
+    />
 
-    <!-- custom css -->
+    <!-- Colour of the phone browser bar (same as --bg-color in style.css) -->
+    <meta name="theme-color" content="#101A17" />
+
+    <!-- Emoji favicon: change the emoji between the > < signs if you like -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧪</text></svg>"
+    />
+
+    <!-- Google Fonts: Space Grotesk (headings) and Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons (all the icons on this page) -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- My own CSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <!-- header design -->
+    <!-- ================= HEADER ================= -->
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#home" class="logo">Portfolio</a>
 
-      <i class="bx bx-menu" id="menu-icon"></i>
+      <!-- Menu button: only visible on phones -->
+      <button id="menu-icon" aria-label="Open menu" aria-expanded="false">
+        <i class="bx bx-menu"></i>
+      </button>
 
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Skills</a>
         <a href="#portfolio">Projects</a>
-        <!-- <a href="#contact">Contact</a> -->
       </nav>
+
+      <!-- Thin gold line that grows while you scroll (script.js controls it) -->
+      <div class="scroll-progress" id="scroll-progress"></div>
     </header>
 
-    <!-- home section design -->
+    <!-- ================= HOME ================= -->
     <section class="home" id="home">
       <div class="home-content">
-        <h3>Hello, It's Me</h3>
-        <h1>Abishek</h1>
-        <h3>I'm an <span>QA Automation Engineer</span></h3>
-        <!-- <span class="multiple-text"></span> -->
-        <h3>Welcome !!!</h3>
-        <div class="social-media">
-          <a href="https://github.com/Abishek-GH" target="_blank"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/abishek362/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://stackoverflow.com/users/25891776/abishek-kumar?tab=profile" target="_blank"><i class='bx bxl-stack-overflow'></i></a>
+        <!-- Each line has its own hero-line class so they appear one after another -->
+        <h3 class="hero-line hero-line-1">Hello, It's Me</h3>
+        <h1 class="hero-line hero-line-2">Abishek</h1>
+        <h3 class="hero-line hero-line-3">I'm an <span>SDET</span></h3>
+        <h3 class="hero-line hero-line-4">Welcome !!!</h3>
+
+        <!-- Social icons and button fade in after the lines -->
+        <div class="hero-extra">
+          <div class="social-media">
+            <a
+              href="https://github.com/Abishek-GH"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abishek491/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a
+              href="https://stackoverflow.com/users/25891776/abishek-kumar?tab=profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Stack Overflow"
+              ><i class="bx bxl-stack-overflow"></i
+            ></a>
+          </div>
+
+          <a
+            href="https://raw.githubusercontent.com/Abishek-GH/My-Portfolio/refs/heads/master/assets/files/Abishek%20Kumar%20-%20Resume.pdf"
+            download="Abishek-Resume"
+            target="_blank"
+            class="btn"
+            >Download Resume</a
+          >
         </div>
-        <a href="
-https://raw.githubusercontent.com/Abishek-GH/My-Portfolio/refs/heads/master/assets/files/Abishek%20Kumar%20-%20Resume.pdf" download="Abishek-Resume" class="btn"
-        target="_blank">Download Resume</a>
       </div>
 
       <div class="home-img">
-        <img src="./assets/images/personal/IMG_HOME1.PNG" alt="My_Picture">
+        <img src="./assets/images/personal/IMG_HOME1.PNG" alt="Abishek Kumar" />
       </div>
     </section>
 
-    <!-- about section design -->
+    <!-- ================= ABOUT ================= -->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="./assets/images/personal/IMG_ABOUT1.PNG" alt="About_Pic">
+        <img
+          src="./assets/images/personal/IMG_ABOUT1.PNG"
+          alt="Abishek Kumar at work"
+        />
       </div>
 
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
-        <h3>QA Automation Engineer</h3>
-        <p><span>QA Automation Engineer</span> with 2.4 years of experience in a product-based
-              company. Specializing in building and maintaining end-to-end automation
-              frameworks using Playwright, TypeScript/JavaScript, and Node.js,
-              seamlessly incorporating these frameworks into CI/CD pipelines. Proficient
-              in UI, API, and database testing. Passionate about making a meaningful
-              contribution to a collaborative team.</p>
+        <h3>SDET</h3>
+        <p>
+          <span>SDET</span> with 3+ years of experience in product-based
+          companies, building end-to-end automation frameworks from scratch
+          using Playwright, TypeScript/JavaScript, and Node.js. Experienced in
+          UI, API, and database testing, CI/CD integration, and cross-system
+          validation. Leverage AI tools to streamline test development and
+          debugging.
+        </p>
       </div>
     </section>
 
-    <!-- services section design -->
+    <!-- ================= SKILLS ================= -->
+    <!-- Skills are ordered from most famous to least famous, five per row.
+         To add a skill: copy one service-box, change the icon class and the name.
+         Then add one colour line for that icon class in style.css (section 9). -->
     <section class="services" id="services">
       <h2 class="heading">My <span>Skills</span></h2>
-      <div class="services-container">
 
+      <div class="services-container">
         <div class="service-box">
-          <i class='bx bxs-flask' ></i>
+          <i class="bx bxs-flask"></i>
           <h3>Playwright</h3>
         </div>
-
         <div class="service-box">
-          <i class="bx bxl-javascript"></i></i>
-          <h3>JavaScript</h3>
-        </div>
-
-        <div class="service-box">
-          <i class='bx bxl-typescript'></i>
-          <h3>TypeScript</h3>
-        </div>
-
-        <div class="service-box">
-          <i class="bx bxl-nodejs"></i></i>
+          <i class="bx bxl-nodejs"></i>
           <h3>Node.JS</h3>
         </div>
-
         <div class="service-box">
-          <i class='bx bxl-postgresql'></i>
-          <h3>PostgreSQL</h3>
+          <i class="bx bxl-typescript"></i>
+          <h3>TypeScript</h3>
         </div>
-
         <div class="service-box">
-          <i class='bx bxl-mongodb' ></i>
-          <h3>MongoDB</h3>
+          <i class="bx bxl-javascript"></i>
+          <h3>JavaScript</h3>
         </div>
-
         <div class="service-box">
-          <i class="bx bxl-python"></i></i>
+          <i class="bx bxl-python"></i>
           <h3>Python</h3>
         </div>
-
         <div class="service-box">
-          <i class='bx bxl-aws'></i>
+          <i class="bx bx-data"></i>
+          <h3>SQL</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-postgresql"></i>
+          <h3>PostgreSQL</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-google-cloud"></i>
+          <h3>BigQuery</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-mongodb"></i>
+          <h3>MongoDB</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-aws"></i>
           <h3>AWS</h3>
         </div>
-
         <div class="service-box">
-          <i class='bx bxl-docker'></i> 
+          <i class="bx bxl-git"></i>
+          <h3>Git</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-github"></i>
+          <h3>GitHub Actions</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-gitlab"></i>
+          <h3>GitLab CI/CD</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxs-bot"></i>
+          <h3>Claude &amp; MCP</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-docker"></i>
           <h3>Docker</h3>
         </div>
-
         <div class="service-box">
-          <i class='bx bxl-github'></i>
-          <h3>GitHub</h3>
+          <i class="bx bx-transfer"></i>
+          <h3>End to End Testing</h3>
         </div>
-
         <div class="service-box">
-          <i class="bx bxl-html5"></i></i>
+          <i class="bx bxl-chrome"></i>
+          <h3>Cross-Browser Testing</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-heroku"></i>
+          <h3>Heroku</h3>
+        </div>
+        <div class="service-box">
+          <i class="bx bxl-html5"></i>
           <h3>HTML</h3>
         </div>
-
         <div class="service-box">
-          <i class="bx bxl-css3"></i></i>
+          <i class="bx bxl-css3"></i>
           <h3>CSS</h3>
         </div>
-
       </div>
     </section>
 
-    <!-- portfolio section design -->
+    <!-- ================= PROJECTS ================= -->
     <section class="portfolio" id="portfolio">
       <h2 class="heading">My <span>Projects</span></h2>
 
-
       <div class="portfolio-container">
-
         <div class="portfolio-box">
-          <img src="./assets/images/project/NatoursWebApp.png" alt="natours_webapp">
+          <img
+            src="./assets/images/project/NatoursWebApp.png"
+            alt="Natours WebApp screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Natours WebApp</h4>
-            <a href="https://natours-abishek-9cbc3fa443ff.herokuapp.com/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://natours-abishek-9cbc3fa443ff.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Natours WebApp"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-        
         <div class="portfolio-box">
-          <img src="./assets/images/project/RecipeApp.png" alt="forkify_app">
+          <img
+            src="./assets/images/project/RecipeApp.png"
+            alt="Forkify WebApp screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Forkify WebApp</h4>
-            <a href="https://forkify-abishek.netlify.app/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://forkify-abishek.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Forkify WebApp"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-
         <div class="portfolio-box">
-          <img src="./assets/images/project/Mapty.png" alt="mapty_app">
+          <img
+            src="./assets/images/project/Mapty.png"
+            alt="Mapty WebApp screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Mapty WebApp</h4>
-            <a href="https://abishek-gh.github.io/Mapty-App/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/Mapty-App/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Mapty WebApp"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-        
         <div class="portfolio-box">
-          <img src="./assets/images/project/WeatherApp.png" alt="weather_app">
+          <img
+            src="./assets/images/project/WeatherApp.png"
+            alt="Weather WebApp screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Weather WebApp</h4>
-            <a href="https://abishek-gh.github.io/WeatherApp" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/WeatherApp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Weather WebApp"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-        
         <div class="portfolio-box">
-          <img src="./assets/images/project/BankistOperations.png" alt="bankist_operations">
+          <img
+            src="./assets/images/project/BankistOperations.png"
+            alt="Bankist WebApp screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Bankist WebApp</h4>
-            <a href="https://abishek-gh.github.io/Bankist-Operations/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/Bankist-Operations/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Bankist WebApp"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-
         <div class="portfolio-box">
-          <img src="./assets/images/project/PortFolio.png" alt="personal_portfolio">
+          <img
+            src="./assets/images/project/PortFolio.png"
+            alt="Personal Portfolio screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Personal Portfolio</h4>
-            <a href="https://abishek-gh.github.io/Portfolio" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Personal Portfolio"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-
         <div class="portfolio-box">
-          <img src="./assets/images/project/BankistHomePage.png" alt="bankist_homepage">
+          <img
+            src="./assets/images/project/BankistHomePage.png"
+            alt="Bankist HomePage screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Bankist HomePage</h4>
-            <a href="https://abishek-gh.github.io/Bankist/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/Bankist/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Bankist HomePage"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
-
         <div class="portfolio-box">
-          <img src="./assets/images/project/DiceGame.png" alt="dice_game">
+          <img
+            src="./assets/images/project/DiceGame.png"
+            alt="Dice Game screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Dice Game</h4>
-            <a href="https://abishek-gh.github.io/DiceGame/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/DiceGame/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Dice Game"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
 
         <div class="portfolio-box">
-          <img src="./assets/images/project/AmazonClone.png" alt="amazon_homepage_clone">
+          <img
+            src="./assets/images/project/AmazonClone.png"
+            alt="Amazon HomePage screenshot"
+          />
           <div class="portfolio-layer">
             <h4>Amazon HomePage</h4>
-            <a href="https://abishek-gh.github.io/Amazon-Clone/" target="_blank"><i class="bx bx-link-external"></i></a>
+            <a
+              href="https://abishek-gh.github.io/Amazon-Clone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Amazon HomePage"
+              ><i class="bx bx-link-external"></i
+            ></a>
           </div>
         </div>
-
-        <!-- <div class="portfolio-box">
-          <img src="./assets/images/project/GuessNumber.png" alt="project_8">
-          <div class="portfolio-layer">
-            <h4>Guess Number</h4>
-            <a href="https://abishek-gh.github.io/GuessNumber/" target="_blank"><i class="bx bx-link-external"></i></a>
-          </div>
-        </div> -->
-
       </div>
     </section>
-    
 
-    <!-- contact section design -->
-    <!-- <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="https://formspree.io/abishek3622@gmail.com" method="POST">
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Full Name">
-          <input type="email" name="_replyto" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-          <input type="tel" name="phone" placeholder="Mobile Number">
-          <input type="text" name="subject" placeholder="Email Subject">
-        </div>
-        <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
-      </form>
-    </section> -->
+    <!-- ================= LET'S WORK TOGETHER STRIP ================= -->
+    <div class="work-strip">
+      <h2>Let's work together</h2>
+      <a href="mailto:abishek3995@gmail.com" class="btn">Send an Email</a>
+    </div>
 
-    <!-- footer design -->
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-      <div class="footer-text">
-        <p>Content Copyright &copy; 2024 by Abishek Kumar</p>
-        <p>Design Copyright &copy; by Youtube Creator Codehal  | All Rights Reserved.</p>
-      </div>
+      <p>Content Copyright &copy; 2026 by Abishek Kumar</p>
+      <a href="#home" class="top-btn" aria-label="Back to top"
+        ><i class="bx bx-up-arrow-alt"></i
+      ></a>
+    </footer>
 
-      <div class="footer-iconTop">
-        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
-    </footer> 
-
-
-    <!-- scroll reveal -->
+    <!-- ScrollReveal library (makes sections appear while scrolling) -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- typed js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- custom js -->
+    <!-- My own JavaScript -->
     <script src="./script.js"></script>
   </body>
 </html>

@@ -48,7 +48,7 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal(
   '.home-img, .services-container, .portfolio-box, .contact form',
-  { origin: 'bottom' }
+  { origin: 'bottom' },
 );
 
 // ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
@@ -56,7 +56,7 @@ ScrollReveal().reveal(
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-  strings: ['Associate Software Engineer'],
+  strings: ['SDET II'],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,

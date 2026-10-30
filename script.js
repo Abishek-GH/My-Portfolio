@@ -56,9 +56,9 @@ ScrollReveal().reveal(
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-  strings: ['SDET II'],
+  strings: ['SDET 2', 'Automation Engineer'],
   typeSpeed: 100,
   backSpeed: 100,
-  backDelay: 1000,
+  backDelay: 1200,
   loop: true,
 });

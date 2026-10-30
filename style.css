@@ -272,7 +272,7 @@ section {
   border-radius: 50%;
   font-size: 2rem;
   color: var(--main-color);
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 3rem 10rem 3rem 0;
   transition: 0.3s ease;
 }
 
